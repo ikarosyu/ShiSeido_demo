@@ -1,28 +1,67 @@
-let
-    lis = $(".bannerUL li"),
-    len = lis.length,
-    currentIndex = 0,
-    nextIndex = 1;
+require(['./config'], function () {
+    require(['swiper', 'loadHF'], function (Swiper) {
+        // 主页类
+        class Home {
+            constructor() {
+                this.initCarousel()
+            }
 
-console.log(lis, len);
+            // 初始化轮播图
+            initCarousel() {
+                new Swiper ('.swiper-container', {
+                    loop: true, // 循环模式选项
+                    autoplay: true, // 自动轮播
 
-function move() {
-    $(lis[currentIndex]).fadeOut();
-    $(lis[nextIndex]).fadeIn();
+                    // 如果需要前进后退按钮
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                })
+            }
+        }
 
-    currentIndex = nextIndex;
-    nextIndex++;
-    if (nextIndex >= len) {
-        nextIndex = 0;
-    }
-}
+        new Home()
+    })
+})
 
-let timer = setInterval(move, 4000);
 
-$("#goPrev").on('click', function () {
-    nextIndex = currentIndex - 1;
-    if (nextIndex < 0)
-        nextIndex = len - 1;
-    move();
-});
-$("#goNext").on("click", move);
+
+
+
+
+
+
+
+
+
+
+
+// let
+//     lis = $(".bannerUL li"),
+//     len = lis.length,
+//     currentIndex = 0,
+//     nextIndex = 1;
+//
+// console.log(lis, len);
+//
+// function move() {
+//     $(lis[currentIndex]).fadeOut();
+//     $(lis[nextIndex]).fadeIn();
+//
+//     currentIndex = nextIndex;
+//     nextIndex++;
+//     if (nextIndex >= len) {
+//         nextIndex = 0;
+//     }
+// }
+//
+// let timer = setInterval(move, 4000);
+//
+// $("#goPrev").on('click', function () {
+//     nextIndex = currentIndex - 1;
+//     if (nextIndex < 0)
+//         nextIndex = len - 1;
+//     move();
+// });
+// $("#goNext").on("click", move);

@@ -6,59 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="/css/index.css">
-  <script src="/libs/jquery/jquery-1.11.3.js"></script>
+  <link rel="stylesheet" href="./libs/swiper/css/swiper.min.css">
+  <script src="/libs/requirejs/require.js" data-main="/js/index"></script>
 </head>
 <body>
 <header>
-  <div class="top_header">
-    <div class="in_header">
-      <div class="top_left fl font12">全场免运费</div>
-      <div class="top_right fr font12">
-        <a href="#">登录/注册</a>
-        <a href="#">0 件商品</a>
-      </div>
-    </div>
-  </div>
 
-  <nav>
-    <div class="in_nav">
-      <div class="top_nva ac">
-        <a href="#"><img src="images/logo.png" alt=""></a>
-      </div>
-      <div class="bottom_nav ">
-        <div class="left_nav fl">
-          <ul class="ac font14">
-            <li><a href="#">首页</a></li>
-            <li><a href="#">护肤</a></li>
-            <li><a href="#">彩妆</a></li>
-            <li><a href="#">男士</a></li>
-            <li><a href="#">防晒</a></li>
-            <li><a href="#">官网臻享</a></li>
-            <li><a href="#">明星产品</a></li>
-            <li><a href="#">官网购理由</a></li>
-            <li><span>|</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">品牌故事</a></li>
-            <li><a href="#">专柜导航</a></li>
-          </ul>
-        </div>
-        <div class="search fr">
-          <input type="search" placeholder="商品搜索">
-        </div>
-      </div>
-    </div>
-  </nav>
 </header>
 <section>
   <div class="banner" id="banner_box">
-    <ul class="bannerUL">
-      <li style="display: block;"><a href="javascript:alert(0);"><img src="./images/banner01.jpg" alt=""></a></li>
-      <li><a href="javascript:alert(1);"><img src="./images/banner02.jpg" alt=""></a></li>
-      <li><a href="javascript:alert(2);"><img src="./images/banner03.jpg" alt=""></a></li>
-      <li><a href="javascript:alert(3);"><img src="./images/banner04.jpg" alt=""></a></li>
-      <li><a href="javascript:alert(4);"><img src="./images/banner05.jpg" alt=""></a></li>
-    </ul>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/banner01.jpg" alt="" style="width: 1920px; height: 500px;">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner02.jpg" alt="" style="width: 1920px; height: 500px;">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner03.jpg" alt="" style="width: 1920px; height: 500px;">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner04.jpg" alt="" style="width: 1920px; height: 500px;">
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/banner05.jpg" alt="" style="width: 1920px; height: 500px;">
+        </div>
+      </div>
 
-    <a href="javascript:;" id="goPrev">&lsaquo;</a>
-    <a href="javascript:;" id="goNext">&rsaquo;</a>
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
   </div>
   <div class="in_section">
     <div class="products">
@@ -129,29 +108,7 @@
   </div>
 </section>
 <footer>
-  <div class="in_footer">
-    <div class="top_footer">
-      <div class="fl left">
-        <ul class="font12">
-          <li><a href="#">美容常见问题</a></li>
-          <li><a href="#">网站常见问题</a></li>
-          <li><a href="#">免责隐私保护</a></li>
-          <li><a href="#">联系我们</a></li>
-          <li><a href="#">服务条款</a></li>
-        </ul>
-      </div>
-      <div class="fr font12 right">
-        <p>分享网站到</p>
-      </div>
-    </div>
-    <div class="bottom_footer">
-      <div class="web_info font12">
-        <p class="des">Copyright(c) 2019资生堂(中国)投资有限公司；Shiseido China Co., Ltd. All rights reserved</p>
-        <a href="">沪ICP备10203872号-1</a><a href=""> 企业营业执照</a>&nbsp;<i> SHISEIDO资生堂官方网站暨网上商城 全国咨询热线：400-821-6076</i>
-        <p class="beian"><img src="./images/beian.png" alt=""><a href="">&nbsp; 沪公网安备 31011502007430号</a></p>
-      </div>
-    </div>
-  </div>
+
 </footer>
 <div class="backTop">
   <ul class="ac font16">
@@ -174,6 +131,6 @@
     </li>
   </ul>
 </div>
-  <script src="/js/index.js"></script>
+
 </body>
 </html>
