@@ -1,0 +1,251 @@
+section {
+  .in_section {
+      width: 980px;
+      margin: 0 auto;
+      padding: 18px 0 0 0;
+      color: #252525;
+      border-right: 0 solid #e5e5e5;
+      border-left: 0 solid #e5e5e5;
+      .cartMain {
+        margin-top: 32px;
+        .main {
+          margin-bottom: 20px;
+          .shopping-step {
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            .shopping-step-item {
+              margin: 0 5px 0 0;
+              padding: 0;
+              width: 163px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+              font-size: 14px;
+              color: #fff;
+              background: #a7a9ac;
+              float: left;
+            }
+            span {
+              float: left;
+              vertical-align: middle;
+              margin-top: 11px;
+              margin-right: 5px;
+              display: inline-block;
+              width: 15px;
+              height: 16px;
+              background: url("../images/home_105.jpg");
+            }
+          }
+          .cart-container {
+            width: 955px;
+            margin: 0 auto;
+            padding-top: 20px;
+            .cart-main {
+              border-collapse: collapse;
+              border-spacing: 0;
+              thead {
+                background: #fff;
+                padding-bottom: 10px;
+                font-size: 14px;
+                tr {
+                  display: table-row;
+                  vertical-align: inherit;
+                  border-color: inherit;
+                  th {
+                    text-align: center;
+                    padding: 4px 0 4px;
+                    height: 36px;
+                    line-height: 36px;
+                    border-top: 1px solid #7c0d02;
+                    border-bottom: 4px solid #7c0d02;
+                    color: #670205;
+                    font-size: 16px;
+                  }
+                }
+              }
+              .cart-item {
+                display: table-row-group;
+                vertical-align: middle;
+                border-color: inherit;
+                .cart-product {
+                  td {
+                    vertical-align: middle;
+                    text-align: center;
+                    padding: 20px 0;
+                    border-bottom: 1px dotted #ccc;
+                    .s_img_list {
+                      text-align: center;
+                      vertical-align: middle;
+                    }
+                    .p-name {
+                       text-align: left;
+                       padding-left: 10px;
+                       a {
+                         color: #252525;
+                       }
+                     }
+                  }
+
+                  .p-price {
+                    font-size: 14px;
+                    color: #670205;
+                    font-weight: 600;
+                  }
+                  .p-num {
+                    .p-quantity {
+                      width: 94px;
+                      border: 1px solid #cfcfcf;
+                      .btn-decrease {
+                        background: url("../images/jian.jpg") no-repeat;
+                        border-right: 1px solid #cfcfcf;
+                      }
+                      .btn-increase {
+                        background: url("../images/jia.jpg") no-repeat;
+                        border-right: 1px solid #cfcfcf;
+                      }
+                      a {
+                        display: inline-block;
+                        width: 26px;
+                        height: 22px;
+                        float: left;
+                        text-indent: -9999px;
+                        margin: 0;
+                        overflow: hidden;
+                      }
+                      input {
+                        width: 40px;
+                        height: 22px;
+                        float: left;
+                        border: 0;
+                        margin: 0;
+                        text-align: center;
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                  .p-subtotal {
+                    font-size: 14px;
+                    color: #670205;
+                    font-weight: 600;
+                  }
+                  .p-action {
+                    .btn-del {
+                      font-size: 16px;
+                      margin-bottom: 5px;
+                      color: #000;
+                      display: block;
+                      .icon-xin-25 {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                        margin-right: 2px;
+                        background: url("../images/icon_delete.png") no-repeat;
+                      }
+                    }
+                    .btn-joinlist {
+                      font-size: 14px;
+                      text-align: center;
+                      color: #000;
+                      display: block;
+                      .icon-xin-26 {
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                        margin-right: 2px;
+                        background: url("../images/icon_collect (1).png") no-repeat;
+                      }
+                    }
+                  }
+                }
+              }
+              tfoot {
+                display: table-footer-group;
+                vertical-align: middle;
+                border-color: inherit;
+
+                #cart_float {
+                  td {
+                    padding: 20px 0 5px 30px;
+                    border: 0;
+                    vertical-align: middle;
+                    .order-btn-cons {
+                      padding: 0 0 20px 0;
+                      clear: both;
+                      text-align: left;
+                      .total_price {
+                        font-size: 14px;
+                        color: #000;
+                        span {
+                          padding: 0 50px;
+                          color: #670205;
+                          font-size: 18px;
+                        }
+                      }
+                    }
+                  }
+                  #cart_rearrangement {
+                    text-align: right;
+                    .btn_continue_shopping {
+                      display: inline-block;
+                      width: 112px;
+                      height: 30px;
+                      text-align: center;
+                      line-height: 30px;
+                      color: #ba291f;
+                      font-size: 14px;
+                      background: #fff;
+                      border: 1px solid #ba291f;
+                      vertical-align: middle;
+                    }
+                    .w_btn {
+                      display: inline-block;
+                      color: #fff;
+                      background: #7c0d02;
+                      text-align: center;
+                      text-decoration: none!important;
+                      vertical-align: middle;
+                      font-size: 14px;
+                      height: 30px;
+                      line-height: 30px;
+                      width: 112px;
+                      margin-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+            .payment_security {
+              background: #eee;
+              width: 100%;
+              padding: 5px 0;
+              display: block;
+              clear: both;
+              height: auto!important;
+              min-height: 20px;
+              overflow: hidden;
+                li {
+                  width: 30%;
+                  color: #851d13;
+                  height: 100%;
+                  line-height: 36px;
+                  font-size: 14px;
+                  float: left;
+                  padding-left: 3%;
+                  text-align: center;
+                }
+                img {
+                  vertical-align: middle;
+                  display: inline-block;
+                  border: 0;
+                  font-size: 0;
+                  line-height: 0;
+                  overflow: hidden;
+                }
+            }
+          }
+        }
+      }
+  }
+}
