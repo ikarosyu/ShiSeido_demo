@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/list.css">
+    <script src="/libs/requirejs/require.js" data-main="/js/list"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section>
+        <div class="in_section">
+            <div class="top_section">
+                <div class="navMin fl font12">
+                    <p><a href="#">首页</a> >> <a href="">男士</a></p>
+                </div>
+                <div class="fun fr font14">
+                    <p><i>排序</i> <em>产品总数：6</em></p>
+                </div>
+            </div>
+            <div class="prod_list_container">
+                <div class="sub_col fl font14">
+                    <div class="catalog-item">按种类</div>
+                    <div class="series-item">按系列</div>
+                </div>
+                <div class="prod_list fl">
+                    <ul class="prod_list_ul">
+<!--                        <li class="ac">-->
+<!--                            <a href=""><img src="../images/prod_list_1.png" alt=""></a>-->
+<!--                            <p><a href="">男士洗面奶</a></p>-->
+<!--                            <p>125ml</p>-->
+<!--                            <p>￥270</p>-->
+<!--                            <a href="#" class="addBtn">加入购物车</a><br>-->
+<!--                            <a href="#" class="seeDetail">详情</a>-->
+<!--                        </li>-->
+                    </ul>
+                    <script type="text/html" id="list-template">
+                        {{each list item}}
+                        <li class="ac">
+                            <a href="/html/detail.html?id={{item.id}}" target="_blank"><img src="{{item.images}}" alt=""></a>
+                            <p><a href="/html/detail.html?id={{item.id}}">{{item.title}}</a></p>
+                            <p>{{item.size}}ml</p>
+                            <p>￥{{item.price}}</p>
+                            <a href="#" class="addBtn">加入购物车</a><br>
+                            <a href="#" class="seeDetail">详情</a>
+                        </li>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

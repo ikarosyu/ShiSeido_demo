@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <section>
+        <div class="in_section">
+            <div class="sub_col fl font14">
+                <div class="catalog-item">按种类</div>
+                <div class="series-item">按系列</div>
+            </div>
+
+            <div class="prod_des fl">
+                </div>
+            <script type="text/html" id="detail-template">
+                <img src="{{prod.image}}" alt="" class="fl prod_img">
+                <div class="product_right fr">
+                    <div class="product_container" id="shop-detail">
+                        <h3 class="fl">{{prod.title}}</h3>
+                        <a class="fr share"></a><br><br>
+                        <h4>{{prod.size}}ml</h4>
+                        <div class="legend">
+                            <span style="font-weight:bold;">详情：</span>{{prod.detail}}<br>
+                            <br>
+                            <span style="font-weight:bold;">功效：</span>{{prod.effect}}
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                            <br>
+                            <span style="font-weight:bold;">使用方法：</span> •{{prod.method}}
+                            <br>
+                        </div>
+                        <div class="goods_format">
+                            <div class="buy_goods_num">
+                                <li class="product-buy-quantity">
+                                    <label class="item-label" for="for_quantity_input">数量：</label>
+                                    <span class="item-content">
+                                    <span class="p-quantity" ><a href="#" class="btn-decrease">-</a>
+                                        <input type="text" name="goods[num]" id="for_quantity_input" class="action-quantity-input" value="1" min="1" max=""><a href="#" class="btn-increase">+</a>
+                                    </span>
+                                    <span class="p-store"></span>
+                                    <input type="hidden" id="" name="stock" value="">
+                                </span>
+                                    <span class="goodsbuy_total fr" style="">价格：
+                                    <span class="goods_price_total">￥
+                                        <span id="goodsbuy_total">{{prod.price}}</span>
+                                    </span>
+                                </span>
+                                </li>
+                            </div>
+                        </div>
+                        <div class="btn-box clearfix">
+                            <button type="submit" class="btn adP" rel="_request" style="margin-right:10px;">加入购物车</button>
+                            <button class="btn btn-import btn-huge action-buynow" rel="_request" type="submit">
+                                <span>立即购买</span>
+                            </button>
+                            <a href="#" class="btn add-wish no-wish btn-addfav">加入收藏</a>
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <div class="last_container fl">
+                <div class="payment_security">
+                    <ul>
+                        <li><img src="../images/icon_official.png"> 官方正品保证</li>
+                        <li><img src="../images/icon_free.png"> 全场免运费</li>
+                        <li><img src="../images/icon_security.png"> 支付保障</li>
+                    </ul>
+                </div>
+                <div id="goods-rec" class="goods-rec picScroll-left" style="display:block;">
+                    <div class="xgtj">
+                        <div class="w_xgtj_head">
+                            <span>相关商品推荐</span>
+                        </div>
+                    </div>
+                    <div id="product_related" class="rec-list-box" style="height: 320px;width: 920px;">
+                        <ul class="rec-list" >
+
+                        </ul>
+                    </div>
+                    <script type="text/html" id="some-template">
+                        {{each list item}}
+                        <li>
+                            <a href="/html/detail.html?id={{item.id}}"><img src="{{item.images}}" alt="" width="130" height="130"></a>
+                            <a href=/html/detail.html?id={{item.id}}"" class="relative_goods_name">{{item.title}}</a>
+                            <p class="relative_goods_unit">{{item.size}}mL</p>
+                            <p class="relative_goods_price">￥{{item.price}}</p>
+                            <div style="margin:5px auto 15px;width:100px;">
+                                <a href="" style="color:#fff;">加入购物车</a>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="/libs/requirejs/require.js" data-main="/js/detail"></script>
+
+</body>
+</html>

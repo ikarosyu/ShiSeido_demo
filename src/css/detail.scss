@@ -1,0 +1,252 @@
+section {
+    .in_section {
+        padding: 70px 12px 0 60px;
+        .sub_col {
+            width: 170px;
+            height: 100%;
+            color: #7f7e7f;
+            padding-left: 25px;
+            .series-item {
+                margin-top: 20px;
+            }
+            .catalog-item, .series-item {
+                background: url("../images/arrow_left.jpg") no-repeat 130px 5px;
+            }
+        }
+        .prod_des {
+            width: 920px;
+            .prod_img {
+                width: 337px;
+                height: 337px;
+            }
+            .product_right {
+                width: 563px;
+                .product_container {
+                    margin-bottom: 64px;
+                    h3 {
+                        font-size: 20px;
+                        line-height: 33px;
+                        height: 33px;
+                        color: #000;
+                        width: 450px;
+                        margin-bottom: 5px;
+                    }
+                    .share {
+                        display: block;
+                        width: 49px;
+                        height: 20px;
+                        background: url("../images/fenxiang.jpg") no-repeat 0 0;
+                    }
+                    h4 {
+                        font-size: 14px;
+                        color: #670205;
+                        line-height: 36px;
+                        height: 36px;
+                        border-bottom: 1px solid #a8a9ad;
+                    }
+                    .legend {
+                        padding-top: 10px;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #202331;
+                    }
+                    .goods_format {
+                        margin-top: 50px;
+                        li {
+                            list-style: none;
+                            margin-bottom: 20px;
+                            display: list-item;
+                            .item-label {
+                                font-size: 14px;
+                                color: #202331;
+                            }
+                            .item-content {
+                                .p-quantity {
+                                    border: 0;
+                                    width: 122px;
+                                    display: inline-block;
+                                    //width: 74px;
+                                    overflow: hidden;
+                                    vertical-align: middle;
+                                    a {
+                                        width: 25px;
+                                        height: 24px;
+                                        display: inline-block;
+                                        overflow: hidden;
+                                        vertical-align: middle;
+                                        border: 1px solid #a9a9a9;
+                                        text-align: center;
+                                        font: 14px/22px simsun,serif;
+                                        float: left;
+                                        text-indent: -9999px;
+                                        margin: 0;
+                                    }
+                                    .btn-decrease {
+                                        background: url("../images/jian.jpg") no-repeat;
+                                    }
+                                    input {
+                                        height: 24px;
+                                        width: 68px;
+                                        line-height: 21px;
+                                        padding: 0;
+                                        margin: 0;
+                                        vertical-align: middle;
+                                        border-width: 1px 0;
+                                        border-style: solid;
+                                        border-color: #a9a9a9;
+                                        text-align: center;
+                                        float: left;
+                                        font-size: 16px;
+                                    }
+                                    .btn-increase {
+                                        background: url("../images/jia.jpg") no-repeat;
+                                    }
+                                }
+                                .p-store {
+                                    padding: 0 10px;
+                                    background-color: #ddd;
+                                    display: inline-block;
+                                    margin-left: 3px;
+                                    vertical-align: middle;
+                                }
+                            }
+                            .goodsbuy_total {
+                                position: relative;
+                                top: -10px;
+                                font-size: 14px;
+                                color: #202331;
+                                .goods_price_total {
+                                    font-size: 25px;
+                                    color: #670205;
+                                    .goodsbuy_total {
+                                        font-size: 25px;
+                                        color: #670205;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .btn-box {
+                        .adP {
+                            background: #fff;
+                            color: #7c0d02;
+                            border: 1px solid #7c0d02!important;
+                        }
+                        .btn {
+                            width: 130px;
+                            height: 35px;
+                            text-align: center;
+                            font-size: 12px;
+                            float: left;
+                        }
+                        .action-buynow {
+                            background: #7c0d02;
+                            width: 130px;
+                            height: 35px;
+                            line-height: 35px;
+                            font-size: 12px;
+                            color: #fff;
+                        }
+                        .no-wish {
+                            font-size: 12px;
+                            color: #000;
+                            background: url("../images/icon_collect.png") left no-repeat!important;
+                            display: inline;
+                            line-height: 35px;
+                            text-align: left;
+                            padding-left: 30px;
+                            width: auto;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .last_container {
+            width: 920px;
+            padding-left: 200px;
+            .payment_security {
+                background: #eee;
+                width: 100%;
+                padding: 5px 0;
+                display: block;
+                clear: both;
+                height: auto!important;
+                min-height: 20px;
+                overflow: hidden;
+                li {
+                    width: 30%;
+                    color: #851d13;
+                    height: 100%;
+                    line-height: 36px;
+                    font-size: 14px;
+                    float: left;
+                    padding-left: 3%;
+                    text-align: center;
+                }
+            }
+            .goods-rec {
+                margin-bottom: 50px;
+                clear: both;
+                .xgtj {
+                    .w_xgtj_head {
+                        line-height: 44px;
+                        font-size: 16px;
+                        color: #670205;
+                        border-top: 1px solid #7c0d02;
+                        border-bottom: 4px solid #7c0d02;
+                        margin-bottom: 30px;
+                        position: relative;
+
+                    }
+                }
+                .rec-list-box {
+
+                }
+            }
+            .picScroll-left {
+                overflow: hidden;
+                ul {
+                    display: block;
+                    //flex-wrap: wrap;
+                    justify-content: space-between;
+                    //zoom: 1;
+                    li {
+                        margin: 0 30px;
+                        float: left;
+                        overflow: hidden;
+                        text-align: center;
+                        height: auto;
+                        width: 167px;
+                        display: inline;
+                        position: relative;
+                        a {
+                            font-size: 14px;
+                            color: #000;
+                            line-height: 29px;
+                            display: block;
+                            img {
+                                width: 167px;
+                                height: 167px;
+                            }
+                        }
+                        .relative_goods_unit {
+                            font-size: 14px;
+                            color: #000;
+                        }
+                        .relative_goods_price {
+                            font-size: 18px;
+                            color: #670205;
+                            line-height: 40px;
+                        }
+                        div {
+                            background: #7c0d02;
+                            margin: 5px auto 15px;
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

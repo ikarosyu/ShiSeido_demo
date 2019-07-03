@@ -46,7 +46,7 @@ define(['jquery'], function ($) {
 
         // 加载尾部
         loadFooter() {
-            $('footer').load('html/include/footer.html')
+            $('footer').load('/html/include/footer.html')
         }
     }
 
