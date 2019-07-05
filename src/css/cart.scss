@@ -1,6 +1,6 @@
 section {
   .in_section {
-      width: 980px;
+      width: 1000px;
       margin: 0 auto;
       padding: 18px 0 0 0;
       color: #252525;
@@ -37,25 +37,19 @@ section {
             }
           }
           .cart-container {
-            width: 955px;
+            width: 1000px;
             margin: 0 auto;
             padding-top: 20px;
             .cart-main {
-              border-collapse: collapse;
-              border-spacing: 0;
               thead {
                 background: #fff;
                 padding-bottom: 10px;
-                font-size: 14px;
                 tr {
-                  display: table-row;
-                  vertical-align: inherit;
-                  border-color: inherit;
                   th {
                     text-align: center;
-                    padding: 4px 0 4px;
-                    height: 36px;
-                    line-height: 36px;
+                    padding: 0 0 4px;
+                    height: 40px;
+                    line-height: 40px;
                     border-top: 1px solid #7c0d02;
                     border-bottom: 4px solid #7c0d02;
                     color: #670205;
