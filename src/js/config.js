@@ -7,13 +7,17 @@ require.config({
         swiper: 'libs/swiper/js/swiper.min',
         template: "libs/art-template/template-web",
         fly: "libs/jquery-plugins/jquery.fly.min",
-        zoom: "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min"
+        zoom: "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
+        cookie: "libs/jquery-plugins/jquery.cookie"
     },
     shim: {
         fly: {
             deps: ['jquery']
         },
         zoom: {
+            deps: ['jquery']
+        },
+        cookie: {
             deps: ['jquery']
         }
     }

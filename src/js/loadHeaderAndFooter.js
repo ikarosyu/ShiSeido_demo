@@ -1,5 +1,5 @@
 // 定义模块， 复用页面头部、尾部
-define(['jquery'], function ($) {
+define(['jquery', 'cookie'], function ($) {
     // 定义类， 该类主要用于加载头部、尾部
     class LoadHeaderAndFooter {
         constructor() {
@@ -11,6 +11,7 @@ define(['jquery'], function ($) {
         loadHeader() {
             $('header').load('/html/include/header.html', () => {
                 this.addListener()
+                this.initHeader()
             })
         }
 
@@ -20,6 +21,33 @@ define(['jquery'], function ($) {
             $('.search input:first').on("keyup", this.suggesteHandler)
             // 提示的内容点击， 显示到搜索框中：事件委派
             $('.suggest').delegate("div", "click", this.suggestClickHandler)
+            // 推出登录
+            $(".exit-login").on("click", this.exitLoginHandler)
+        }
+
+        // 读取登录用户信息
+        initHeader() {
+            let userInfo = $.cookie("login");
+            if (userInfo) {
+                userInfo = JSON.parse(userInfo);
+                console.log(userInfo);
+
+                $(".loginUserName").html(userInfo.username);
+                $(".un_login").css({display: "none"});
+                $(".al_login").css({display: "block"})
+            }
+        }
+
+        // 退出登录
+        exitLoginHandler() {
+            if (confirm("你确定要退出吗？")) {
+                // 删除cookie
+                $.removeCookie('login', '/')
+
+                // 切换显示页面
+                $(".un_login").css({display: "block"});
+                $(".al_login").css({display: "none"})
+            }
         }
 
         // 点击建议项处理

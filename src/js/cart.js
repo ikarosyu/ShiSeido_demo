@@ -111,7 +111,7 @@ require(['./config'], () => {
                 let sum = 0
                 console.log($(".chk-prod:checked"))
                 $(".chk-prod:checked").each((index, element) => {
-                    console.log($(element).parents("tr").find(".p-subtotal").text())
+                    // console.log($(element).parents("tr").find(".p-subtotal").text())
                     sum += Number($(element).parents("tr").find(".p-subtotal").text())
                 })
                 $("#total-price").text(sum.toFixed(2))

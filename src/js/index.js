@@ -1,8 +1,9 @@
 require(['./config'], function () {
-    require(['swiper', 'loadHF'], function (Swiper) {
+    require(['jquery', 'swiper', 'loadHF', 'cookie'], function ($, Swiper) {
         // 主页类
         class Home {
             constructor() {
+                // this.checkUser()
                 this.initCarousel()
             }
 
@@ -19,6 +20,19 @@ require(['./config'], function () {
                     },
                 })
             }
+
+            // 检查用户是否登录
+            // checkUser() {
+            //     let userInfo = $.cookie("register");
+            //     if (userInfo) {
+            //         userInfo = JSON.parse(userInfo);
+            //         console.log(userInfo);
+            //
+            //         $(".loginUserName").html(userInfo.username);
+            //         $(".un_login").css({display: "none"});
+            //         $(".al_login").css({display: "block"})
+            //     }
+            // }
         }
 
         new Home()
