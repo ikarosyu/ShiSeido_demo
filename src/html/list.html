@@ -5,7 +5,24 @@
     <title>商品列表</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/libs/requirejs/require.js" data-main="/js/list"></script>
+    <script src="/js/pagination.js"></script>
+
+    <style>
+        .page-container {
+            margin: 20px 0;
+        }
+
+        .card {
+            margin-bottom: 15px;
+        }
+
+        .page-option-btn {
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -17,9 +34,14 @@
                 <div class="navMin fl font12">
                     <p><a href="#">首页</a> >> <a href="">男士</a></p>
                 </div>
+
                 <div class="fun fr font14">
-                    <p><i>排序</i> <em>产品总数：6</em></p>
+
                 </div>
+
+                <script type="text/html" id="some-template">
+                    <p><i>排序</i> <em>产品总数：{{list.length}}</em></p>
+                </script>
             </div>
             <div class="prod_list_container">
                 <div class="sub_col fl font14">
@@ -27,7 +49,7 @@
                     <div class="series-item">按系列</div>
                 </div>
                 <div class="prod_list fl">
-                    <ul class="prod_list_ul">
+                    <ul class="prod_list_ul page-list">
 <!--                        <li class="ac">-->
 <!--                            <a href=""><img src="../images/prod_list_1.png" alt=""></a>-->
 <!--                            <p><a href="">男士洗面奶</a></p>-->
@@ -37,6 +59,15 @@
 <!--                            <a href="#" class="seeDetail">详情</a>-->
 <!--                        </li>-->
                     </ul>
+
+<!--                    <nav aria-label="Page navigation">-->
+<!--                        <ul class="pagination">-->
+<!--                        </ul>-->
+<!--                    </nav>-->
+                    <div class="row">
+                        <div class="page-container"></div>
+                    </div>
+
                     <script type="text/html" id="list-template">
                         {{each list item}}
                         <li class="ac">
@@ -58,5 +89,9 @@
     <footer>
 
     </footer>
+
+<aside>
+
+</aside>
 </body>
 </html>

@@ -1,44 +1,62 @@
 require(['./config'], function () {
-    require(['jquery', 'template', 'loadHF'], function ($, template) {
+    require(['jquery', 'template', 'loadHF', 'loadAS'], function ($, template) {
         // List列表类
         class List {
             constructor() {
-                // this.container = $('.prod_list_ul')
-                this.getData().then((list) => {
-                    // 首先then里面接收了resolve传递过来的list数据，紧接着继续传递给renderList
-                    this.renderList(list)
-                })
+                this.getData()
+                this.showProd()
             }
 
             getData() {
-                // 请求后端接口拿到列表数据
-                return new Promise(resolve => {
-                    $.get('http://rap2api.taobao.org/app/mock/223440/api/list', resp => {
-                        if (resp.res_code === 200) {
-                            // 传递实参，把从接口取到的数据传递给 then
-                            resolve(resp.res_body.list)
+                const url = `http://rap2api.taobao.org/app/mock/223440/api/list`
+                $.getJSON(url, resp => {
+                    // 获取响应数据中使用的商品信息部分
+                    const _new = resp.res_body.list
+                    console.log(_new)
+
+
+                    const pageSize = 9
+                    const dataCount = _new.length
+                    console.log(dataCount)
+
+                    const pager = new Pagination('.page-container', {
+                        pageSize: pageSize,
+                        autoLoad: true,
+                        unit: '条',
+                        toPage: function (index, _pageSize) {
+                            // 设置记录总数，用于生成分页HTML内容
+                            if (index === 0 || _pageSize) this.updateCount(dataCount, _pageSize)
+
+                            // 根据页码以及分页大小生成html内容
+                            let pageListHtml = ''
+                            for (var i = 0; i < (_pageSize || pageSize); i++) {
+                                pageListHtml += `
+                                    <li class="ac">
+                                        <a href="/html/detail.html?id=${index * (_pageSize || pageSize) + i + 1}" target="_blank"><img src="${_new[i].images}" alt=""></a>
+                                        <p><a href="/html/detail.html?id=${index * (_pageSize || pageSize) + i + 1}">${_new[i].title}</a></p>
+                                        <p>${_new[i].size}ml</p>
+                                        <p>￥${_new[i].price}</p>
+                                        <a href="#" class="addBtn">加入购物车</a><br>
+                                        <a href="#" class="seeDetail">详情</a>
+                                    </li>
+                                    `
+                            }
+                            $('.page-list').html(pageListHtml)
                         }
                     })
                 })
             }
 
-            renderList(list) {
-                // 第二个参数 {list: list} 这个对象里的key指的是template里面需要的变量名，value指的是从接口获取的值
-                // let str = template('list-template', { list: list })
-                let str = template('list-template', { list })
-                $('.prod_list_ul').html(str)
+            showProd() {
+                const url = `http://rap2api.taobao.org/app/mock/223440/api/list`
+                $.getJSON(url, resp => {
+                    const _prod = resp.res_body.list
+                    const data = {list: _prod}
+                    const html = template("some-template", data)
+                    $(".fun").prepend(html)
+                })
             }
 
-            // 初始化渲染页面
-            // initProductList() {
-            //     $.get('http://rap2api.taobao.org/app/mock/223440/api/list', resp => {
-            //         // console.log(resp)
-            //         // 调用template方法，第一个参数就是script的id（不带#），第二个参数是当前模板需要的数据
-            //         const str = template('list-template', {list: resp.res_body.list})
-            //         // console.log(str)
-            //         $('.prod_list_ul').html(str)
-            //     })
-            // }
         }
 
         new List()

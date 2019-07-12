@@ -1,5 +1,5 @@
 require(['./config'], function () {
-    require(['jquery', 'swiper', 'loadHF', 'cookie'], function ($, Swiper) {
+    require(['jquery', 'swiper', 'loadHF', 'loadAS', 'cookie'], function ($, Swiper) {
         // 主页类
         class Home {
             constructor() {
@@ -12,6 +12,7 @@ require(['./config'], function () {
                 new Swiper ('.swiper-container', {
                     loop: true, // 循环模式选项
                     autoplay: true, // 自动轮播
+                    effect: 'fade',
 
                     // 如果需要前进后退按钮
                     navigation: {
@@ -20,19 +21,6 @@ require(['./config'], function () {
                     },
                 })
             }
-
-            // 检查用户是否登录
-            // checkUser() {
-            //     let userInfo = $.cookie("register");
-            //     if (userInfo) {
-            //         userInfo = JSON.parse(userInfo);
-            //         console.log(userInfo);
-            //
-            //         $(".loginUserName").html(userInfo.username);
-            //         $(".un_login").css({display: "none"});
-            //         $(".al_login").css({display: "block"})
-            //     }
-            // }
         }
 
         new Home()

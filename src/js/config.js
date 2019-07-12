@@ -8,7 +8,9 @@ require.config({
         template: "libs/art-template/template-web",
         fly: "libs/jquery-plugins/jquery.fly.min",
         zoom: "libs/jquery-plugins/jquery.elevateZoom-3.0.8.min",
-        cookie: "libs/jquery-plugins/jquery.cookie"
+        cookie: "libs/jquery-plugins/jquery.cookie",
+        loadAS: 'js/aside'
+        // pagination: "libs/jquery-plugins/jquery.pagination"
     },
     shim: {
         fly: {
@@ -20,5 +22,8 @@ require.config({
         cookie: {
             deps: ['jquery']
         }
+        // pagination: {
+        //     deps: ['jquery']
+        // },
     }
 })

@@ -23,7 +23,9 @@
             </div>
             <script type="text/html" id="detail-template">
                 <div class="prod-detail" data-id="{{prod.id}}">
-                    <img src="{{prod.image}}" alt="" class="fl prod_img">
+
+                    <img src="{{prod.image}}" data-zoom-image="{{prod.image}}" alt="" class="fl prod_img" style="width: 337px">
+
                     <div class="product_right fr">
                         <div class="product_container" id="shop-detail">
                             <h3 class="fl prod-title">{{prod.title}}</h3>
@@ -109,6 +111,10 @@
     <footer>
 
     </footer>
+
+    <aside>
+
+    </aside>
 
     <script src="/libs/requirejs/require.js" data-main="/js/detail"></script>
 

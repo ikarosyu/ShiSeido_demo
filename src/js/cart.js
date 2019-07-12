@@ -47,7 +47,7 @@ require(['./config'], () => {
                 const _id = _tr.data("id")
                 // 从购物车数组中删除该id 对应的商品元素
                 this.cart = this.cart.filter(curr => curr.id != _id) // filter() 过滤器， 返回筛选后的数组
-                // 从存储的结果中删除改id对应的商品元素
+                // 从存储的结果中删除该id对应的商品元素
                 localStorage.cart = JSON.stringify(this.cart)
                 // 从DOM树中删除行
                 _tr.remove()
@@ -74,6 +74,7 @@ require(['./config'], () => {
                     const _val = $(e.target).val()
                     // 判断输入是否合法
                     if (!/^[1-9]\d*$/.test(_val)) {
+                        console.log("123");
                         $(e.target).val(prod.amount)
                     }// 输入不是整数数字，则将数量还原为原始数量值
                     prod.amount = Number(_val)
@@ -100,7 +101,8 @@ require(['./config'], () => {
 
             // 部分选中
             checkProductHandler(e) {
-                // console.log($(".chk-prod:checked").length)
+                console.log($(".chk-prod:checked").length)
+                console.log(this.cart.length)
                 $(".chk_all").prop("checked", $(".chk-prod:checked").length === this.cart.length)
 
                 this.calcTotalPrice()
@@ -109,7 +111,7 @@ require(['./config'], () => {
             // 计算合计金额
             calcTotalPrice() {
                 let sum = 0
-                console.log($(".chk-prod:checked"))
+                // console.log($(".chk-prod:checked"))
                 $(".chk-prod:checked").each((index, element) => {
                     // console.log($(element).parents("tr").find(".p-subtotal").text())
                     sum += Number($(element).parents("tr").find(".p-subtotal").text())

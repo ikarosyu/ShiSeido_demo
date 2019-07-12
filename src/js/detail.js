@@ -1,5 +1,5 @@
 require(['./config'], () => {
-    require(['jquery', 'template', 'loadHF', 'fly'], function ($, template) {
+    require(['jquery', 'template', 'loadHF', 'fly', 'zoom', 'loadAS'], function ($, template) {
         // 商品详情类
         class Detail {
             constructor() {
@@ -35,6 +35,7 @@ require(['./config'], () => {
                     const html = template("detail-template", data)
                     // 显示渲染结果
                     $(".prod_des").prepend(html)
+
                 })
             }
 
@@ -55,6 +56,12 @@ require(['./config'], () => {
                 // let str = template('list-template', { list: list })
                 let str = template('some-template', { list })
                 $('.rec-list').html(str)
+
+                $(".prod_img").elevateZoom({
+                    zoomType: "lens",
+                    lensShape: "round",
+                    lensSize: 200
+                });
             }
 
             // 注册事件监听

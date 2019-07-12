@@ -1,5 +1,5 @@
 require(['./config'], () => {
-    require(['jquery', 'loadHF', 'cookie'], ($) => {
+    require(['jquery', 'loadHF', 'cookie', 'loadAS'], ($) => {
         // 登陆注册类
         class LoginRegister {
             constructor() {
